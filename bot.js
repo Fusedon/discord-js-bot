@@ -19,6 +19,9 @@ client.loadCommands("src/commands");
 client.loadContexts("src/contexts");
 client.loadEvents("src/events");
 
+const keep_alive = require('./server.js')
+keep_alive()
+
 // find unhandled promise rejections
 process.on("unhandledRejection", (err) => client.logger.error(`Unhandled exception`, err));
 
