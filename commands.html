@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Commands</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+</head>
+<body onload="displayCommands()">
+    <div id="logo">
+        <img src="images/logo.png" alt="Bot Logo">
+    </div>
+    <h1>Bot Commands</h1>
+    <div id="commandList"></div>
+    <script>
+        function displayCommands() {
+            var commandList = document.getElementById('commandList');
+            for (var i = 0; i < botCommands.length; i++) {
+                var command = document.createElement('p');
+                command.textContent = botCommands[i].name + ': ' + botCommands[i].description;
+                commandList.appendChild(command);
+            }
+        }
+    </script>
+</body>
+</html>
